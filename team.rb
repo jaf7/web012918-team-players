@@ -10,8 +10,8 @@ class Team
   end
 
   def players
-    team_players = TeamPlayer.all.select {|tp| tp.team == self}
-    team_players.map { |team_player| team_player.player }
+    filtered_teams = TeamPlayer.all.select {|player| player.team == self}
+    filtered_team.map { |team| team.player }
   end
 
 end

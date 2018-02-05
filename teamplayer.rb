@@ -1,6 +1,6 @@
 class TeamPlayer
-  attr_accessor :player, :team
 
+  attr_accessor :player, :team
   @@all = []
 
   def initialize(player, team)
@@ -12,4 +12,5 @@ class TeamPlayer
   def self.all
     @@all
   end
+
 end

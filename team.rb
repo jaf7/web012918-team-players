@@ -1,8 +1,17 @@
+require 'pry'
+
 class Team
-  attr_accessor :name, :players
+
+  attr_accessor :name
+  @@all = []
 
   def initialize(name)
     @name = name
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 
   def add_player(player)
@@ -10,8 +19,12 @@ class Team
   end
 
   def players
-    filtered_teams = TeamPlayer.all.select {|player| player.team == self}
-    filtered_team.map { |team| team.player }
+    filtered_players = TeamPlayer.all.select do |team_player|
+      team_player.team == self
+    end
+    filtered_players.map do |team_player|
+      team_player.player
+    end
   end
-
+  
 end

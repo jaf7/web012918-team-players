@@ -14,5 +14,7 @@ TeamPlayer.new(matt, coffee_dad)
 TeamPlayer.new(alex, tea_uncle)
 TeamPlayer.new(niky, tea_uncle)
 TeamPlayer.new(alex, coffee_dad)
+ryan = Player.new("Ryan")
+tea_uncle.add_player(ryan)
 binding.pry
 "hi"
